@@ -123,6 +123,7 @@ ul {
 	height: 250px;
 	float: left;
 	background-size: cover;
+	background-position: center;
 }
 .img:nth-child(3n-1) {
 	margin: 0 10px;
@@ -201,18 +202,29 @@ img {
 	color: #000000;
 	font-family: "Times New Roman", sans-serif;
 }
+.main-box:third-chidl {
+	margin: 0 auto;
+}
 #contact, .contact_box {
 	width: 800px;
 	margin: 0 auto;
 }
 .contact_box {
-	margin-right: 125px;
+	/*margin-right: 70px;*/
+	padding: 0, 20px;
 }
 .adress, .social {
 	width: 400px;
 	float: left;
 	margin: 0 auto;
+	/*padding: 0 30px;*/
 	/*text-align: left;*/
+}
+.adress {
+	padding-left: 120px;
+}
+.social {
+	padding-right: 50px;
 }
 .adress h4, .social h4 {
 	font-size: 20px;
