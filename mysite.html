@@ -10,15 +10,24 @@
 <body>
 	<header>
 		<div class="header-content clearfix">
-		<img src="img11/logo.png" class="logo"> 
-		<nav>
-			<ul>
-				<li class="list"><a href="#portfolio" title="">Portfolio</a></li>
-				<li class="list"><a href="#feature" title="">Feature</a></li>
-				<li class="list"><a href="#profile" title="">Profile</a></li>
-				<li class="list"><a href="#contact" title="">Contact</a></li>
-			</ul>
-		</nav>
+		<img src="img11/logo.png" class="logo">
+
+		<div id="nav-drawer">
+      		<input id="nav-input" type="checkbox" class="nav-unshown">
+      		<label id="nav-open" for="nav-input"><span></span></label>
+     		<label class="nav-unshown" id="nav-close" for="nav-input"></label>
+      		<div id="nav-content">
+      			<nav>
+					<ul>
+					<li class="list"><a href="#portfolio" title="">Portfolio</a></li>
+					<li class="list"><a href="#feature" title="">Feature</a></li>
+					<li class="list"><a href="#profile" title="">Profile</a></li>
+					<li class="list"><a href="#contact" title="">Contact</a></li>
+					</ul>
+				</nav>
+      		</div>
+  		</div>
+		
 		</div>
 	</header><!-- /header -->
 	<main>
@@ -27,8 +36,8 @@
 			<p class="visual-text2">simply dummy text of the printing</p>
 		</div>
 		<div class="main-box color">
-			<div id="portfolio">
-				<h2 class="theme">Portfolio</h2>
+			<div class="portfolio">
+				<h2 id="theme">Portfolio</h2>
 				<p class="comment">It is a long established fact that a reader will be distracted by the readable <br>
 				content of a page when looking at its layout. The point of using Lorem Ipsum is that it has <br>
 				a more-or-less normal distribution of letters</p>
@@ -44,8 +53,8 @@
 			</div>
 		</div>
 		<div class="main-box">
-			<div id="feature">
-			<h2 class="theme">Feature</h2>
+			<div class="feature">
+			<h2 id="theme">Feature</h2>
 			<p class="comment">It is a long established fact that a reader will be distracted by the readable <br>
 			content of a page when looking at its layout. The point of using Lorem Ipsum is that it has <br>
 			a more-or-less normal distribution of letters</p>
@@ -93,8 +102,8 @@
 			</div>
 		</div>
 		<div class="main-box color">
-			<div id="profile">
-				<h2 class="theme">Profile</h2>
+			<div class="profile">
+				<h2 id="theme">Profile</h2>
 				<p class="comment">It is a long established fact that a reader will be distracted by the readable <br>
 				content of a page when looking at its layout. The point of using Lorem Ipsum is that it has <br>
 				a more-or-less normal distribution of letters</p>
@@ -114,24 +123,42 @@
 			</div>
 		</div>
 		<div class="main-box">
-			<div id="contact">
-				<h2 class="theme">Contact</h2>
+			<div class="contact">
+				<h2 id="theme">Contact</h2>
 				<p class="comment">It is a long established fact that a reader will be distracted by the readable <br>
 				content of a page when looking at its layout.  <br>
 			The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters</p>
 			</div>
 			<div class="contact_box clearfix">
+				<div class="leftbox">
+
 				<div class="adress">
+
+					<div class="mail">
 					<h4>Mail</h4>
 					<a href="" title="">xxx@xxx.com</a>
+					</div>
+
+					<div class="tell">
 					<h4>Tell</h4>
-					<a href="" title="">000-0000-0000</a>
+					<a href="" title="">000-0000-0000</a>	
+					</div>
+
 				</div>
+
+				</div>
+				<div class="rightbox">
+
 				<div class="social">
 					<h4>SNS</h4>
+
+					<div class="icon">
 					<i class="fab fa-facebook-f"></i>
 					<i class="fab fa-twitter"></i>
 					<i class="fab fa-instagram"></i>
+					</div>
+				</div>
+				
 				</div>
 			</div>
 		</div>
