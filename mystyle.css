@@ -26,6 +26,9 @@ header {
 	/*background-image: url(log.png);*/
 	/*background-size: contain;*/
 }
+.nav-unshown {
+	display: none;
+}
 ul a {
 	text-decoration: none;
 	color: white;
@@ -40,7 +43,7 @@ ul {
 	list-style: none;
 	font-size: 16px;
 	color: #FAFAFA;
-	padding: 30px 30px;
+	padding: 50px 30px;
 	display: inline-block;
 	font-family: "Times New Roman", sans-serif;
 }
@@ -70,6 +73,12 @@ ul {
 	padding: 90px 0;
 	margin: 0 auto;
 }
+.empty {
+	height: 8px;
+	width: 70px;
+	border-bottom: 3px solid #EC715F;
+	margin :0 auto;
+}
 
 .color {
 	background-color: #ECEFF1;
@@ -98,19 +107,7 @@ ul {
 	text-align: center;
 	font-weight: bold;
 }
-#theme:before {
-	content: "";
-	position: relative;
-	left: 60px;
-	bottom: -10px;
-	display: inline-block;
-	width: 70px;
-	height: 3px;
-	background-color: #EC715F;
-	-webkit-transform: translateX(-50%);
-  	transform: translateX(50%);
-  	/*位置調整*/
-}
+
 .comment {
 	text-align: center;
 	font-size: 16px;
@@ -182,6 +179,10 @@ ul {
 	font-family: "Times New Roman",sans-serif;
 	padding-left: 30px;
 }
+.profile_box {
+	width: 1024px;
+	margin: 0 auto;
+}
 .my-picture {
 	width: 512px;
 	float: left;
@@ -189,7 +190,7 @@ ul {
 	text-align: center;
 	/*margin: auto;*/
 }
-img {
+.my-picture img {
 	border-radius: 50%;
 	height: 250px;
 	width: 250px;
@@ -275,15 +276,18 @@ footer {
 
 
 @media screen and (max-width: 768px) {
-	.logo {
-	height: 70px;
+
+.logo {
+	height: 50px;
 	float: left;
 }
 
 /*ハンバーガーメニュー*/
 header {
-  padding:10px;
   background: skyblue;
+  height: 50px;
+  width: 100%;
+  background-color: #EC715F;
 }
 
 #nav-drawer {
@@ -304,6 +308,7 @@ header {
   vertical-align: middle;
   color: white;
   float: right;
+  margin-border: 2px solid white;
 }
 
 /*ハンバーガーアイコンをCSSだけで表現*/
@@ -316,15 +321,22 @@ header {
   display: block;
   content: '';
   cursor: pointer;
-
 }
 #nav-open span:before {
   bottom: -8px;
+  background-color: white;
 }
 #nav-open span:after {
   bottom: -16px;
+  background-color: white;
 }
-
+#nav-open span {
+	background-color: white;
+}
+#nav-open {
+	padding: 3px;
+	border-color: white ;
+}
 /*閉じる用の薄黒カバー*/
 #nav-close {
   display: none;/*はじめは隠しておく*/
@@ -363,25 +375,24 @@ header {
 
 #nav-input:checked ~ #nav-content {
   -webkit-transform: translateX(0%);
-  transform: translateX(100%);/*中身を表示（右へスライド）*/
+  transform: translateX(0%);/*中身を表示（右へスライド）*/
   box-shadow: 6px 0 25px rgba(0,0,0,.15);
+}
+.square {
+	display: inline-block;
+	margin-left: 60% ;
+	border: solid white;
+	padding: 7px;
 }
 /*hハンバーガーメニューここまで*/
 
-header {
-	height: 50px;
-	width: 100%;
-	background-color: #EC715F;
-}
-.logo {
-	position: relative;
-	top: -20px;
-	right: 40px;
-}
+
+
 .header-content {
 	width: 90%;
 	height: 50px;
-	margin: 0 auto
+	margin: 0 auto;
+	padding: 5px 0;
 	/*background-image: url(log.png);*/
 	/*background-size: contain;*/
 }
@@ -430,38 +441,15 @@ ul {
 	margin: 0 auto;
 }
 
-.portfolio {
-	width: 90%;
-	margin: 90px auto;
+
+.portfolio, .feature, .profile, .contact {
+	width: 100%;
+	margin: 0px auto;
 }
-.feature {
-	width: 90%;
-	margin: 90px auto;
-}
-.profile {
-	width: 90%;
-	margin: 90px auto;
-}
-.contact {
-	width: 90%;
-	margin: 90px auto;
-}
+
 .theme {
 	text-align: center;
 	font-weight: bold;
-}
-.theme:before {
-	content: "";
-	position: relative;
-	left: 60px;
-	bottom: -10px;
-	display: inline-block;
-	width: 70px;
-	height: 3px;
-	background-color: #EC715F;
-	-webkit-transform: translateX(-50%);
-  	transform: translateX(50%);
-  	/*位置調整*/
 }
 
 .portfolio_box {
@@ -488,22 +476,33 @@ ul {
 }
 
 .box {
-	width: 90%;
-	margin: 0 auto;
+	width: 100%;
+}
+.comments {
+	/*padding: 0 20%;*/
+	/*margin: 0 auto;*/
+}
+.strength:nth-child(2) {
+	padding: 0;
+	margin:0 auto;
 }
 .strength {
 	width: 90%;
 	height: auto;
-	margin-bottom: 90px;
+	margin:0 0 90px 0;
 	float: none;
 }
+
 .strength {
-	margin-bottom: 90px;
+	margin: 0 auto;
+	width: 320px;
 }
 .strength i {
 	font-size: 60px;
+	margin: 0;
 	text-align: center;
-	margin-left: 45%;
+	display: block;
+	/*margin-left: 45%;*/
 	/*margin-left: 120px;*/
 }
 .strength h4 {
@@ -512,25 +511,26 @@ ul {
 }
 .strength p {
 	/*padding-left: 30px;*/
+	display: inline-block;
+	margin :0 auto;
 	margin-bottom: 10px;
-	margin-left: 20%;
-	padding: 0px;
+	/*margin-left: 20%;*/
+	/*padding: 0px;*/
+}
+.profile_box {
+	width: 100%;
+	margin: 0 auto;
 }
 .my-picture {
-	width: 90%;
+	width: 100%;
 	float: none;
 	margin-bottom: 90px;
 	/*text-align: center;*/
 	margin: auto;
 }
-img {
-	border-radius: 50%;
-	height: 250px;
-	width: 250px;
-	margin: 0 auto ;
-}
+
 .intro {
-	width: 90%;
+	width: 100%;
 	float: none;
 	margin-bottom: 90px;
 	text-align: center;
